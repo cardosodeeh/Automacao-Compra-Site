@@ -1,0 +1,51 @@
+Feature: Desafio QA
+    Será executado os três desafios propostos para o candidato do QA
+
+
+Scenario: Comprar o produto alterando o endereço de entrega
+    Given que esteja no site de compra
+    When clicar no produto desejado
+    And clicar para selecionar o produto
+    And clicar para adicionar ao carrinho
+    And clicar para continuar a compra
+    And fazer o login do cadastro
+    And clicar para alterar o endereço de entrega
+    And alterar o endereço
+    And alterar a cidade
+    And alterar estado
+    And salvar o novo endereço
+    And seguir com a compra
+    And selecionar o tipo de pagamento
+    And finalizar compra
+    Then deverá finalizar a compra com o endereço de entrega inserido na alteração
+
+
+Scenario: Comprar o produto alterando o endereço de cobrança
+    Given que esteja no site de compra
+    When clicar no produto desejado
+    And clicar para selecionar o produto
+    And clicar para adicionar ao carrinho
+    And clicar para continuar a compra
+    And fazer o login do cadastro
+    And clicar para alterar o endereço de cobrança
+    And alterar o endereço
+    And alterar a cidade
+    And alterar estado
+    And salvar o novo endereço
+    And seguir com a compra
+    And selecionar o tipo de pagamento
+    And finalizar compra
+    Then deverá finalizar a compra com o endereço de entrega inserido na alteração
+
+
+Scenario: Comprar o produto utilizando cheque
+    Given que esteja no site de compra
+    When clicar no produto desejado
+    And clicar para selecionar o produto
+    And clicar para adicionar ao carrinho
+    And clicar para continuar a compra
+    And fazer o login do cadastro
+    And seguir com a compra
+    And selecionar o tipo de pagamento igual a cheque
+    And finalizar compra
+    Then deverá finalizar a compra com o tipo de pagamento igual a cheque
